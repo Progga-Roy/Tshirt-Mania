@@ -7,7 +7,7 @@ import './Home.css'
 const Home = () => {
    const [tShirts, setTShirts]  = useTShirt();
    const [cart, setCart] = useState([]);
-   const handleAddToCart = (selectedItem)=>{
+   const handleAddToCart = (selectedItem)=>{ 
     const exist = cart.find(tShirt => tShirt._id === selectedItem._id)
     if (!exist) {
         const newCart = [...cart,selectedItem]

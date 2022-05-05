@@ -20,7 +20,7 @@ const Cart = ({cart,handleRemoveFromCart}) => {
         <div>
              <h1>Item selected :{cart.length} </h1>
            
-             {command}
+         
           
            
            {
@@ -28,7 +28,11 @@ const Cart = ({cart,handleRemoveFromCart}) => {
                <button onClick={()=>handleRemoveFromCart(tShirt)}> x </button>
                </p>)
            }
-          
+              
+              {cart.length === 0 || <p>YAY! you are buying</p>}
+           {cart.length=== 3 && <p>This three shirts are selected for gift</p>}
+              {command}
+              {cart.length !==4 ? <p>Keep adding</p>: <button> Remove item</button>}
         </div>
     );
 };
